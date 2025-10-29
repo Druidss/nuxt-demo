@@ -1,18 +1,38 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@theme static {
-  --font-sans: 'Public Sans', sans-serif;
+@font-face {
+  font-family: 'Rational';
+  src: url('/fonts/RATIONALSansTT-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+@font-face {
+  font-family: 'Rational';
+  src: url('/fonts/RATIONALSansTT-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rational';
+  src: url('/fonts/RATIONALSansTT-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme static {
+  --font-sans: 'Rational', sans-serif;
+
+  /* RITA Brand Color */
+  --color-rational-red: #E2001A;
+
+  /* System Gray Colors */
+  --color-natural-500: #808080;
+  --color-natural-700: #333333;
+  --color-natural-200: #E6E6E6;
 }
