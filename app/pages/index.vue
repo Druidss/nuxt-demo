@@ -14,7 +14,10 @@ const email = ref('')
     </div>
 
     <!-- Logo -->
-    <NuxtLink to="/" class="absolute top-6 left-[6%]">
+    <NuxtLink
+      to="/"
+      class="absolute top-6 left-[6%]"
+    >
       <img
         src="/images/logo.png"
         alt="RATIONAL Logo"
@@ -40,7 +43,10 @@ const email = ref('')
         <div class="flex justify-end mb-16">
           <button class="flex items-center gap-1 text-sm text-natural-700 border-b border-natural-700 pb-1">
             <span>English</span>
-            <UIcon name="i-lucide-chevron-down" class="w-5 h-5" />
+            <UIcon
+              name="i-lucide-chevron-down"
+              class="w-5 h-5"
+            />
           </button>
         </div>
 
@@ -63,25 +69,30 @@ const email = ref('')
                   v-model="email"
                   type="email"
                   placeholder="Enter your email"
-                  size="xl"              
+                  size="xl"
                   :ui="{
-                    base: 'h-12 bg-natural-200 border-natural-700 w-full text-natural-700 ',
+                    base: 'h-12 bg-natural-200 border-natural-700 w-full text-natural-700 '
                   }"
                   class="w-full"
-
                 />
 
                 <!-- Register Link -->
                 <div class="flex items-center gap-3.5 text-sm">
                   <span class="text-natural-700">Don't have an account?</span>
-                  <NuxtLink to="/register" class="text-rational-red hover:underline">
+                  <NuxtLink
+                    to="/register"
+                    class="text-rational-red hover:underline"
+                  >
                     Register here.
                   </NuxtLink>
                 </div>
               </div>
 
               <!-- Login Button -->
-              <NuxtLink to="/home" class="block w-full">
+              <NuxtLink
+                to="/home"
+                class="block w-full"
+              >
                 <UButton
                   block
                   size="xl"
@@ -95,10 +106,16 @@ const email = ref('')
 
           <!-- Footer Links -->
           <div class="flex items-center justify-center gap-20 text-sm text-natural-500 pt-32">
-            <NuxtLink to="/data-protection" class="hover:underline">
+            <NuxtLink
+              to="/data-protection"
+              class="hover:underline"
+            >
               Data Protection
             </NuxtLink>
-            <NuxtLink to="/imprint" class="hover:underline">
+            <NuxtLink
+              to="/imprint"
+              class="hover:underline"
+            >
               Imprint
             </NuxtLink>
           </div>

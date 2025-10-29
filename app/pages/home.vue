@@ -100,8 +100,8 @@ const filteredData = computed(() => {
 
   const query = searchQuery.value.toLowerCase()
   return data.value.filter(report =>
-    report.title.toLowerCase().includes(query) ||
-    report.serialNumber.toLowerCase().includes(query)
+    report.title.toLowerCase().includes(query)
+    || report.serialNumber.toLowerCase().includes(query)
   )
 })
 
@@ -183,17 +183,38 @@ const columns: TableColumn<Report>[] = [
     <!-- Header -->
     <header class="bg-white border-b border-gray-200 px-8 py-4">
       <div class="flex items-center justify-between">
-        <NuxtLink to="/" class="flex items-center gap-4">
-          <img src="/images/logo.png" alt="RATIONAL Logo"
-            class="h-8 cursor-pointer hover:opacity-90 transition-opacity">
+        <NuxtLink
+          to="/"
+          class="flex items-center gap-4"
+        >
+          <img
+            src="/images/logo.png"
+            alt="RATIONAL Logo"
+            class="h-8 cursor-pointer hover:opacity-90 transition-opacity"
+          >
           <span class="text-rational-red font-bold text-lg">Combilyzer</span>
         </NuxtLink>
 
         <div class="flex items-center gap-4">
-          <UButton icon="i-lucide-rotate-ccw" variant="ghost" color="neutral" />
-          <UButton icon="i-lucide-help-circle" variant="ghost" color="neutral" />
-          <UButton icon="i-lucide-bell" variant="ghost" color="neutral" />
-          <UAvatar src="https://i.pravatar.cc/150?u=user" size="sm" />
+          <UButton
+            icon="i-lucide-rotate-ccw"
+            variant="ghost"
+            color="neutral"
+          />
+          <UButton
+            icon="i-lucide-help-circle"
+            variant="ghost"
+            color="neutral"
+          />
+          <UButton
+            icon="i-lucide-bell"
+            variant="ghost"
+            color="neutral"
+          />
+          <UAvatar
+            src="https://i.pravatar.cc/150?u=user"
+            size="sm"
+          />
         </div>
       </div>
     </header>
@@ -214,8 +235,14 @@ const columns: TableColumn<Report>[] = [
       <div class="bg-white rounded-lg shadow-sm">
         <div class="p-6 border-b border-gray-200">
           <div class="flex items-center justify-between">
-            <h3 class="text-2xl font-semibold text-natural-700">Reports</h3>
-            <UButton icon="i-lucide-plus" class="bg-rational-red hover:bg-rational-red/90 text-white" size="lg">
+            <h3 class="text-2xl font-semibold text-natural-700">
+              Reports
+            </h3>
+            <UButton
+              icon="i-lucide-plus"
+              class="bg-rational-red hover:bg-rational-red/90 text-white"
+              size="lg"
+            >
               Create New Report
             </UButton>
           </div>
@@ -224,21 +251,50 @@ const columns: TableColumn<Report>[] = [
         <div class="p-6">
           <!-- Search and Actions -->
           <div class="flex items-center justify-between mb-6">
-            <UInput v-model="searchQuery" icon="i-lucide-search" placeholder="Search a report" class="w-80" :ui="{
-              base: 'h-8 bg-white border-natural-700 w-full text-natural-700',
-            }" />
+            <UInput
+              v-model="searchQuery"
+              icon="i-lucide-search"
+              placeholder="Search a report"
+              class="w-80"
+              :ui="{
+                base: 'h-8 bg-white border-natural-700 w-full text-natural-700'
+              }"
+            />
 
             <div class="flex items-center gap-2">
-              <UButton icon="i-lucide-pencil" variant="ghost" color="neutral" />
-              <UButton icon="i-lucide-list-filter" variant="ghost" color="neutral" />
-              <UButton icon="i-lucide-mail" variant="ghost" color="neutral" />
-              <UButton icon="i-lucide-download" variant="ghost" color="neutral" />
-              <UButton icon="i-lucide-trash-2" variant="ghost" color="neutral" />
+              <UButton
+                icon="i-lucide-pencil"
+                variant="ghost"
+                color="neutral"
+              />
+              <UButton
+                icon="i-lucide-list-filter"
+                variant="ghost"
+                color="neutral"
+              />
+              <UButton
+                icon="i-lucide-mail"
+                variant="ghost"
+                color="neutral"
+              />
+              <UButton
+                icon="i-lucide-download"
+                variant="ghost"
+                color="neutral"
+              />
+              <UButton
+                icon="i-lucide-trash-2"
+                variant="ghost"
+                color="neutral"
+              />
             </div>
           </div>
 
           <!-- Table -->
-          <UTable :data="filteredData" :columns="columns" />
+          <UTable
+            :data="filteredData"
+            :columns="columns"
+          />
         </div>
       </div>
     </div>
